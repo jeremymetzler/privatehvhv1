@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{fbaa959c-a478-454a-ba15-3660f8dd9338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{1e88010e-cd48-441e-bd86-89a509d9b44f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hooks">
+      <UniqueIdentifier>{1c2ab852-51d0-435c-a8e8-6e872d417d41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hooks\Base">
+      <UniqueIdentifier>{19477b06-4a43-4601-b319-8fbc83264932}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hooks\Game">
+      <UniqueIdentifier>{3e2ed32f-6b41-4a2c-a924-469c938723e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Interfaces">
+      <UniqueIdentifier>{d9db0e68-8535-43ca-8af1-0ae566744e26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Utils">
+      <UniqueIdentifier>{bc9c1c77-245a-469d-8e1d-a36b6a53257d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Interfaces\Valve">
+      <UniqueIdentifier>{15ee99c0-05f8-4de8-ae63-43bbc7c60b95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Math &amp; Stuff">
+      <UniqueIdentifier>{e66f6568-ff3c-4dbb-afb4-a1e5d6fc34ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Hacks">
+      <UniqueIdentifier>{a1ebad4b-442a-4583-8ff1-cd29c9a8ee6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Menu">
+      <UniqueIdentifier>{3162387d-f2ae-4113-9145-0a36272b6d22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Hacks\HvH">
+      <UniqueIdentifier>{b2c05614-4a8f-4f06-b230-502cb50181fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Hacks\Visuals">
+      <UniqueIdentifier>{2391ad62-9ffc-4296-bdc4-34d2deb0090b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Hacks\Misc">
+      <UniqueIdentifier>{204018d9-5c62-421f-9272-2534812cdd34}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Misc.h">
+      <Filter>SDK\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>SDK\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="VMTHook.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks.h">
+      <Filter>Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="IBaseClientDLL.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="Interfaces.h">
+      <Filter>SDK\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="dt_common.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="dt_recv.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="IVEngineClient.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>SDK\Math &amp; Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="VMatrix.h">
+      <Filter>SDK\Math &amp; Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>SDK\Math &amp; Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="IEntity.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="IClientNetworkable.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="CHandle.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="NetVarManager.h">
+      <Filter>SDK\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ABytes.h">
+      <Filter>SDK\Math &amp; Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="CMenu.h">
+      <Filter>Features\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>SDK\Math &amp; Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="IPanel.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Features\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Vars.h" />
+    <ClInclude Include="ISurface.h" />
+    <ClInclude Include="Misx.h">
+      <Filter>Features\Hacks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.h">
+      <Filter>Features\Hacks\Visuals</Filter>
+    </ClInclude>
+    <ClInclude Include="ITraceRay.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.h">
+      <Filter>SDK\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlayerMovement.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="IClientState.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="IStudioRender.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="CDebugOverlay.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="ICvar.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="Aimbot.h">
+      <Filter>Features\Hacks\HvH</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityHandle.h">
+      <Filter>Features\Hacks\HvH</Filter>
+    </ClInclude>
+    <ClInclude Include="IVModelRender.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="Autowall.h">
+      <Filter>Features\Hacks\HvH</Filter>
+    </ClInclude>
+    <ClInclude Include="IPhysicsSurfaceProps.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameEvenManager.h">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="AntiAim.h">
+      <Filter>Features\Hacks\HvH</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Misc.cpp">
+      <Filter>SDK\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>SDK\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="EntryPoint.cpp">
+      <Filter>Hooks\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Present.cpp">
+      <Filter>Hooks\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Interfaces.cpp">
+      <Filter>SDK\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="NetVarManager.cpp">
+      <Filter>SDK\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="CMenu.cpp">
+      <Filter>Features\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="WndProc.cpp">
+      <Filter>Hooks\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateMove.cpp">
+      <Filter>Hooks\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="PaintTraverse.cpp">
+      <Filter>Hooks\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Features\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameStageNotify.cpp">
+      <Filter>Hooks\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Misx.cpp">
+      <Filter>Features\Hacks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.cpp">
+      <Filter>Features\Hacks\Visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="Math.cpp">
+      <Filter>SDK\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="BeginFrame.cpp">
+      <Filter>Hooks\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="IEntity.cpp">
+      <Filter>SDK\Interfaces\Valve</Filter>
+    </ClCompile>
+    <ClCompile Include="Aimbot.cpp">
+      <Filter>Features\Hacks\HvH</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityHandle.cpp">
+      <Filter>Features\Hacks\HvH</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawModelExecute.cpp">
+      <Filter>Hooks\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Autowall.cpp">
+      <Filter>Features\Hacks\HvH</Filter>
+    </ClCompile>
+    <ClCompile Include="OverrideView.cpp">
+      <Filter>Hooks\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="CLMove.cpp">
+      <Filter>Hooks\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="EventListener.cpp">
+      <Filter>Hooks\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiAim.cpp">
+      <Filter>Features\Hacks\HvH</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
