@@ -297,9 +297,10 @@ LOOP:
 			{
 				if (g_Vars.Cfg.resolver && lst.Records.size() > 1)
 				{
-					int i = 0;
+					int i = -1;
 					for (PRecord& rec : lst.Records)
 					{
+						i += 1;
 						if (i == lst.Records.size() - 1 || (rec.ShotBullet && !rec.ShotReliable))
 							continue;
 
@@ -332,8 +333,6 @@ LOOP:
 
 							HitPoints(MainInfo, Weapon, lst, rec, Ang, hitbox_pelvis, fwd_pnt | left_pnt | right_pnt | back_pnt);
 						}
-
-						i += 1;
 					}
 
 				}
