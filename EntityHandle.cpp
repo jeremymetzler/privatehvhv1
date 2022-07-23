@@ -65,6 +65,10 @@ PRecord::PRecord(EntInfo& lst)
 	lst.ent->AllowAnimUpdate() = true;
 
 	lst.ent->SetAbsVelocity(lst.NewData.vVelocity);
+	lst.ent->SetAbsPos(lst.NewData.vOrigin);
+	lst.ent->GetOrigin() = lst.NewData.vOrigin;
+	
+	lst.ent->GetAbsOrigin() = lst.NewData.vOrigin;
 
 	g_Ent.UpdateAnimationState(AnimState, vViewAng);
 	lst.ent->UpdateClientAnims();
@@ -103,12 +107,8 @@ PRecord::PRecord(EntInfo& lst)
 	if (ThisThing & 1)
 		*reinterpret_cast<BYTE*>(reinterpret_cast<DWORD>(lst.ent) + 0x270) &= ~1; 
 
-	lst.ent->SetAbsPos(lst.NewData.vOrigin);
 	lst.ent->SetAbsAngles(Vector(0, AnimState->m_flGoalFeetYaw, 0));
-	lst.ent->GetAbsOrigin() = lst.NewData.vOrigin;
 	lst.ent->GetAbsAngle() = Vector(0, AnimState->m_flGoalFeetYaw, 0);
-	lst.ent->GetOrigin() = lst.NewData.vOrigin;
-
 
 	lst.ent->SetupBones(bones, 128, BONE_USED_BY_ANYTHING, flSimtime);
 	memcpy(lst.NewData.bones, bones, (sizeof(matrix3x4_t) * 128));
@@ -144,7 +144,15 @@ void EntityHandle::SetState(C_BaseEntity* ent, PRecord& rec)
 	*AnimState = rec.animstate;
 	memcpy(Animlayers, rec.animlayers, (sizeof(C_AnimationLayer) * 13));
 	ent->GetPosParams() = rec.flPosParams;
-
+	
+	ent->SetAbsPos(rec.vOrigin);
+	ent->GetAbsOrigin() = rec.vOrigin;
+	ent->GetOrigin() = rec.vOrigin;
+	
+	ent->AllowAnimUpdate() = true;
+	ent->UpdateClientAnims();
+	ent->AllowAnimUpdate() = false;
+	
 	//fix fov cull thingy
 	*reinterpret_cast<int*>(reinterpret_cast<DWORD>(ent) + 0xA30) = I::Globals->framecount; // *(_DWORD *)(v6 + 0xA30) = *(_DWORD *)(GlobalVars_0 + 4);
 	*reinterpret_cast<int*>(reinterpret_cast<DWORD>(ent) + 0xA28) = 0; // *(_DWORD *)(v6 + 0xA28) = 0;
@@ -167,11 +175,8 @@ void EntityHandle::SetState(C_BaseEntity* ent, PRecord& rec)
 
 	memcpy(ent->GetBoneCache(), rec.bones, (sizeof(matrix3x4_t) * ent->GetBoneCount()));
 
-	ent->SetAbsPos(rec.vOrigin);
 	ent->SetAbsAngles(Vector(0, AnimState->m_flGoalFeetYaw, 0));
-	ent->GetAbsOrigin() = rec.vOrigin;
 	ent->GetAbsAngle() = Vector(0, AnimState->m_flGoalFeetYaw, 0);
-	ent->GetOrigin() = rec.vOrigin;
 
 	ent->SetupBones(nullptr, 128, BONE_USED_BY_ANYTHING, rec.flSimtime);
 
