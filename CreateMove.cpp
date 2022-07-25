@@ -24,8 +24,6 @@ bool __stdcall Hooks::CreateMove(float flInputSampleTime, CUserCmd* pCmd)
 	if (!sv_cheats->ReadInt())
 		sv_cheats->SetInt(1);
 
-	g_Aimbot.BulletHandle();
-
 	if (g_Globals.GameReady && g_Ent.List.size() > 0) // this is where entity lag records are made
 	{
 		for (EntInfo& lst : g_Ent.List)
@@ -157,7 +155,8 @@ bool __stdcall Hooks::CreateMove(float flInputSampleTime, CUserCmd* pCmd)
 
 	if (g_Globals.LocalPlayer && g_Globals.LocalPlayer->IsAlive() && g_Globals.LocalPlayer->GetActiveWeapon() && g_Globals.LocalPlayer->GetActiveWeapon()->GetWeaponData())
 	{
-
+		g_Aimbot.BulletHandle();
+		
 		float LeashDist = (g_Globals.LocalLeash - g_Globals.LocalPlayer->GetOrigin()).Length();
 		Vector LeashAng = g_Math.CalcAng(g_Globals.LocalLeash, g_Globals.LocalPlayer->GetOrigin());
 		Vector Fwd;
